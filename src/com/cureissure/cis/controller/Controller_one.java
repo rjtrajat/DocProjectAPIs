@@ -41,7 +41,7 @@ public class Controller_one {
 	public /*List<DoctorTable>*/ String getDoctorDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
 		//List<DoctorTable> doctorTablelist = (List<DoctorTable>) repositoryDoctorTable.findAll();
 			//return doctor_range_in_list(doctorTablelist,longitude_user,latitude_user);	
-		return "Here it is working new repo change";
+		return "Here it is working new repo change change";
 	}
 //	
 //	List<DoctorTable> doctor_range_in_list(List<DoctorTable> doctorTablelist,double longitude_user,double latitude_user){
