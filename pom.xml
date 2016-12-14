@@ -15,7 +15,13 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
- 
+  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>WebContent\WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -68,4 +74,5 @@
 </dependency> 
 
 	</dependencies>
+	<packaging>war</packaging>
 </project>
