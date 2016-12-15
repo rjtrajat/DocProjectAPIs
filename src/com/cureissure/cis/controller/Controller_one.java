@@ -2,6 +2,7 @@ package com.cureissure.cis.controller;
 
 import java.util.List;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,10 +39,11 @@ public class Controller_one {
 
 
 	@RequestMapping(value="/detailDoctor",method=RequestMethod.GET)
-	public /*List<DoctorTable>*/ String getDoctorDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
+	public /*List<DoctorTable>*/ String   getDoctorDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
 		//List<DoctorTable> doctorTablelist = (List<DoctorTable>) repositoryDoctorTable.findAll();
-			//return doctor_range_in_list(doctorTablelist,longitude_user,latitude_user);	
-		return "Here it is working new repo change change";
+			//return doctor_range_in_list(doctorTablelist,longitude_user,latitude_user);
+	return	"{\"Doctor\":\"Rajat Singh\",\"Place\":\"Varanasi\"}";
+	
 	}
 //	
 //	List<DoctorTable> doctor_range_in_list(List<DoctorTable> doctorTablelist,double longitude_user,double latitude_user){
@@ -59,11 +61,14 @@ public class Controller_one {
 //			return null;
 //	}
 //	
-//	@RequestMapping(value="/detailHospital",method=RequestMethod.GET)
-//	public List<HospitalTable> getHospitalDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
-//		List<HospitalTable> hospitalTablelist = (List<HospitalTable>) repositoryHospitalTable.findAll();	
-//		return hospital_range_in_list(hospitalTablelist,longitude_user,latitude_user);	
-//	}
+	@RequestMapping(value="/detailHospital",method=RequestMethod.GET)
+	public /*List<HospitalTable>*/ String getHospitalDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
+		//List<HospitalTable> hospitalTablelist = (List<HospitalTable>) repositoryHospitalTable.findAll();	
+		//return hospital_range_in_list(hospitalTablelist,longitude_user,latitude_user);	
+		return 	"{ \"Hospital\" :\"Cure is sure\",\"Place\":\"Noida\"}";
+	
+	
+	}
 //	
 //	List<HospitalTable> hospital_range_in_list(List<HospitalTable> hospitalTablelist,double longitude_user,double latitude_user){
 //		 List<HospitalTable> Range_in_hospital_list;
@@ -81,11 +86,13 @@ public class Controller_one {
 //	
 //	
 //	
-//	@RequestMapping(value="/detailTestCenter",method=RequestMethod.GET)
-//	public List<TestCenterTable> getTestCenterDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
-//		List<TestCenterTable> testcenterTablelist = (List<TestCenterTable>) repositoryTestCenterTable.findAll();	
-//		return testcenter_range_in_list(testcenterTablelist,longitude_user,latitude_user);
-//	}	
+	@RequestMapping(value="/detailTestCenter",method=RequestMethod.GET)
+	public /*List<TestCenterTable>*/ String getTestCenterDetail(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
+		//List<TestCenterTable> testcenterTablelist = (List<TestCenterTable>) repositoryTestCenterTable.findAll();	
+		//return testcenter_range_in_list(testcenterTablelist,longitude_user,latitude_user);
+
+		return "{ \"TestCenter\": \"Rajat Singh test center\",\"Place\":\"Varanasi cholapur\"}";
+}	
 //	
 //	List<TestCenterTable> testcenter_range_in_list(List<TestCenterTable> testcenterTablelist,double longitude_user,double latitude_user){
 //		 List<TestCenterTable> Range_in_testcenter_list;
@@ -100,11 +107,14 @@ public class Controller_one {
 //		return null;
 //	}
 //	
-//	@RequestMapping(value="/detailMedicalShop",method=RequestMethod.GET)
-//	public  List<MedicalShopTable> getMedicalShop(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
-//		List<MedicalShopTable> medicalshopTablelist = (List<MedicalShopTable>) repositoryMedicalShopTable.findAll();	
-//		return medicalshop_range_in_list(medicalshopTablelist,longitude_user,latitude_user);	
-//	}
+	@RequestMapping(value="/detailMedicalShop",method=RequestMethod.GET)
+	public  /*List<MedicalShopTable>*/ String getMedicalShop(@RequestParam("Lon")double longitude_user , @RequestParam("Lat") double latitude_user){
+		//List<MedicalShopTable> medicalshopTablelist = (List<MedicalShopTable>) repositoryMedicalShopTable.findAll();	
+		//return medicalshop_range_in_list(medicalshopTablelist,longitude_user,latitude_user);	
+		return  "{ \"Medical shop\" :\"Rajat Singh Medical shop\",\"Place\":\"Dharsauna Varanasi\"}";
+		
+	
+	}
 //	
 //	List<MedicalShopTable> medicalshop_range_in_list(List<MedicalShopTable> medicalshopTablelist,double longitude_user,double latitude_user){
 //		 List<TestCenterTable> Range_in_testcenter_list;

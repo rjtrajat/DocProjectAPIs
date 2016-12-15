@@ -1,17 +1,17 @@
 <html>
 <head>
-<title>Spring MVC Tutorial Series by Crunchify.com</title>
+<title>CIS cureissure.com</title>
 <style type="text/css">
 body {
 	background-image: url('http://crunchify.com/bg.png');
-}
+}	
 </style>
 </head>
 <body>
 	<br>
 	<div style="text-align:center">
 		<h2>
-			Hey You..!! This is your 1st Spring MCV Tutorial new version..<br> <br>
+			Hey You..!! This is CIS (CureIsSure) for your Better Health Coming Soon..<br> <br>
 		</h2>
 		<h3>
 			
