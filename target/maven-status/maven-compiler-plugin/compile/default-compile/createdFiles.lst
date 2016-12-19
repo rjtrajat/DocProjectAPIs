@@ -6,6 +6,7 @@ com\cureissure\cis\entity\DoctorTable.class
 com\cureissure\cis\Runner\ApplicationRunner.class
 com\cureissure\cis\repository\RepositoryTestCenterTable.class
 com\cureissure\cis\repository\RepositoryHospitalTable.class
+com\cureissure\cis\config\configclass.class
 com\cureissure\cis\repository\RepositoryDoctorTable.class
 com\cureissure\cis\entity\TestCenterTable.class
 com\cureissure\cis\controller\Controller_one.class

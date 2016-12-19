@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
 @Entity
 @Data
 @Table(name="doctor_table")
+@Component
 public class DoctorTable {
 
  @Id

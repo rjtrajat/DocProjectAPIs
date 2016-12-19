@@ -5,7 +5,9 @@ import com.cureissure.cis.entity.MedicalShopTable;
 import com.cureissure.cis.entity.TestCenterTable;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface RepositoryMedicalShopTable extends CrudRepository<MedicalShopTable, String> {
 	MedicalShopTable  findByCis_med_id(String cis_med_id);
 }

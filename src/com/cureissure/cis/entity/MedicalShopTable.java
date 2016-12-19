@@ -6,12 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 import lombok.*;
 
 @Entity
 @Data
 @Table(name="medical_shop_table")
+@Component
 public class MedicalShopTable {
 
 	 @Id

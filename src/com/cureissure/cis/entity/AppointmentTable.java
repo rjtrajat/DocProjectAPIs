@@ -4,12 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 import lombok.*;
 
 @Entity
 @Data
 @Table(name="appointment_table")
+@Component
 public class AppointmentTable {
 
 	 @Id
