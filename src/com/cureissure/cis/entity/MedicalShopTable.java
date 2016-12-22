@@ -1,5 +1,6 @@
 package com.cureissure.cis.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,12 +19,26 @@ import lombok.*;
 public class MedicalShopTable {
 
 	 @Id
-	 private String CIS_MED_ID;
-	 private Long LONGITUDE;
-	 private Long LATITUDE;
-	 private String FULL_ADDRESS;
-	 private String MAIL_ID ;
-	 private String CONTACT;
-	 private String MEDICAL_SHOP_NAME;	
+	 @Column(name="CIS_MED_ID")
+	 private String cismedid;
+	 
+	 @Column(name="LONGITUDE")
+	 private double longitude;
+	 
+	 @Column(name="LATITUDE")
+	 private double latitude;
+	 
+	 @Column(name="FULL_ADDRESS")
+	 private String fulladdress;
+	 
+	 @Column(name="MAIL_ID")
+	 private String mailid ;
+	 
+	 @Column(name="CONTACT")
+	 private String contact;
+	 
+	 @Column(name="MEDICAL_SHOP_NAME")
+	 private String medicalshopname;
+	 
 	
 }

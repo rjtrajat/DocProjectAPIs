@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface RepositoryMedicalShopTable extends CrudRepository<MedicalShopTable, String> {
-	MedicalShopTable  findByCis_med_id(String cis_med_id);
+	MedicalShopTable  findByCismedid(String cismedid);
 }

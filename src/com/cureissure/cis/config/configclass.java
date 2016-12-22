@@ -23,14 +23,16 @@ import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder  ;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-
-
 @Configuration
 //@EnableJpaRepositories(entityManagerFactoryRef="cisEntityManagerFactory",basePackages="com.cureissure.cis.repository")
 //@EnableAutoConfiguration
 public class configclass {
 
-	
+	@Bean/*(name="cisTransactionManager")*/
+	 	public PlatformTransactionManager transactionManager( EntityManagerFactory entityManagerFactory )
+	 	{
+	 		return new JpaTransactionManager(entityManagerFactory);
+	 	}
 	
 	@Bean
 	public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
@@ -64,10 +66,10 @@ public class configclass {
 	public DataSource cisMysqlDataSource(){
 //		return DataSourceBuilder.create().build();
 		DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-		dataSourceBuilder.url("jdbc:h2:~/test/cis_dev");
+		dataSourceBuilder.url("jdbc:mysql://cis-database-cureissure.c6jcobtf46el.us-west-2.rds.amazonaws.com:3306/cis_dev");
 		dataSourceBuilder.username("cis_master_user");
 		dataSourceBuilder.password("kunDAN1!");
-		dataSourceBuilder.driverClassName("org.h2.Driver");
+		dataSourceBuilder.driverClassName("com.mysql.jdbc.Driver");
 		
 		DataSource datasource =  dataSourceBuilder.build();
 		return datasource;

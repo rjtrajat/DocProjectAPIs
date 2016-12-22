@@ -2,6 +2,8 @@
 package com.cureissure.cis.entity;
 
 import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,15 +19,34 @@ import lombok.Data;
 public class DoctorTable {
 
  @Id
- private String CIS_DOC_ID;
- private Long LONGITUDE;
- private Long LATITUDE;
- private String FULL_ADDRESS;
- private String ABOUT_DOCTOR ;
- private String MAIL_ID ;
- private String CONTACT;
- private Date EXPERIENCE;
- private String SPECIALIZATION;
- private String DOCTOR_NAME;
+ @Column(name="CIS_DOC_ID")
+ private String cisdocid;
+ 
+ @Column(name="LONGITUDE")
+ private double longitude;
+ 
+ @Column(name="LATITUDE")
+ private double latitude;
+ 
+ @Column(name="FULL_ADDRESS")
+ private String fulladdress;
+ 
+ @Column(name="ABOUT_DOCTOR")
+ private String aboutdoctor ;
+ 
+ @Column(name="MAIL_ID")
+ private String mailid ;
+ 
+ @Column(name="CONTACT")
+ private String contact;
+ 
+ @Column(name="EXPERIENCE")
+ private Date experience;
+ 
+ @Column(name="SPECIALIZATION")
+ private String specialization;
+ 
+ @Column(name="DOCTOR_NAME")
+ private String doctorname;
 
 }

@@ -1,5 +1,6 @@
 package com.cureissure.cis.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -16,15 +17,34 @@ import lombok.*;
 public class HospitalTable {
 
 	 @Id
-	 private String CIS_HOS_ID;
-	 private Long LONGITUDE;
-	 private Long LATITUDE;
-	 private String FULL_ADDRESS;
-	 private String ABOUT_HOSPITAL ;
-	 private String MAIL_ID ;
-	 private String CONTACT;
-	 private Date ESTABLISHED ;
-	 private String SPECIALIZATION;
-	 private String HOSPITAL_NAME;	
+	 @Column(name="CIS_HOS_ID")
+	 private String cishosid;
+	 
+	 @Column(name="LONGITUDE")
+	 private double longitude;
+	 
+	 @Column(name="LATITUDE")
+	 private double latitude;
+	 
+	 @Column(name="FULL_ADDRESS")
+	 private String fulladdress;
+	 
+	 @Column(name="ABOUT_HOSPITAL")
+	 private String abouthospital ;
+	 
+	 @Column(name="MAIL_ID")
+	 private String mailid ;
+	 
+	 @Column(name="CONTACT")
+	 private String contact;
+	 
+	 @Column(name="ESTABLISHED")
+	 private Date established ;
+	 
+	 @Column(name="SPECIALIZATION")
+	 private String specialization;
+	 
+	 @Column(name="HOSPITAL_NAME")
+	 private String hospitalname;	
 	
 }

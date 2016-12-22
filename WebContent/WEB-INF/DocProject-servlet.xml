@@ -13,8 +13,9 @@
           http://www.springframework.org/schema/data/jpa
     http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
         
+        <jpa:repositories base-package="com.cureissure.cis.repository"/>
          <mvc:annotation-driven />
 	<context:component-scan base-package="com.cureissure.cis.repository com.cureissure.cis.config" />
-	 
+	  <context:component-scan base-package="com.cureissure.cis.controller_class"/> 
 	  
 </beans >

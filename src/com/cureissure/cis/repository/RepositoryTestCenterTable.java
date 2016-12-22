@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface RepositoryTestCenterTable extends CrudRepository<TestCenterTable, String> {
-	TestCenterTable  findByCis_test_id(String cis_test_id);
+	TestCenterTable  findByCistestid(String cistestid);
 }

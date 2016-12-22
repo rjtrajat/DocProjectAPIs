@@ -11,5 +11,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface RepositoryDoctorTable extends CrudRepository<DoctorTable, String> {
 
-	DoctorTable  findByCis_doc_id(String cis_doc_id);
+	DoctorTable  findByCisdocid(String cisdocid);
 }

@@ -1,5 +1,6 @@
 package com.cureissure.cis.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,15 +19,34 @@ import lombok.*;
 public class TestCenterTable {
 
 	 @Id
-	 private String CIS_TEST_ID;
-	 private Long LONGITUDE;
-	 private Long LATITUDE;
-	 private String FULL_ADDRESS;
-	 private String ABOUT_TEST_CENTER ;
-	 private String MAIL_ID ;
-	 private String CONTACT;
-	 private Date ESTABLISHED ;
-	 private String SPECIALIZATION;
-	 private String TEST_CENTER_NAME;	
+	 @Column(name="CIS_TEST_ID")
+	 private String cistestid;
+	 
+	 @Column(name="LONGITUDE")
+	 private double longitude;
+	 
+	 @Column(name="LATITUDE")
+	 private double latitude;
+	 
+	 @Column(name="FULL_ADDRESS")
+	 private String fulladdress;
+	 
+	 @Column(name="ABOUT_TEST_CENTER")
+	 private String abouttestcenter ;
+	 
+	 @Column(name="MAIL_ID")
+	 private String mailid ;
+	 
+	 @Column(name="CONTACT")
+	 private String contact;
+	 
+	 @Column(name="ESTABLISHED")
+	 private Date established ;
+	 
+	 @Column(name="SPECIALIZATION")
+	 private String specialization;
+	 
+	 @Column(name="TEST_CENTER_NAME")
+	 private String testcentername;	
 	
 }

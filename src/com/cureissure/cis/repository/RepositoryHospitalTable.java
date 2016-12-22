@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface RepositoryHospitalTable extends CrudRepository<HospitalTable, String> {
-	HospitalTable  findByCis_hos_id(String cis_hos_id);
+	HospitalTable  findByCishosid(String cishosid);
 }
