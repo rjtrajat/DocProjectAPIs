@@ -2,14 +2,11 @@ package com.cureissure.cis.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
 import lombok.*;
 
 @Entity
