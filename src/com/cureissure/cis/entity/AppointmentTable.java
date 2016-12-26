@@ -53,4 +53,10 @@ public class AppointmentTable {
 	 @Column(name="PAID")
 	 private Boolean paid ;
 	 
+	 @Column(name="APPOINTMENT_TYPE")
+	 private String appointmenttype ;
+	 
+	 @Column(name="APPOINTMENT_TYPE_KEY")
+	 private String appointmenttypekey ;
+	 
 }
