@@ -170,4 +170,18 @@ public class Controller_one {
 		Gson gson = new Gson();
 		return 	gson.toJson(medicalshopcenterTable);
 	}
+	
+	@RequestMapping(value="/detailIndividualDoctorAppoint",method=RequestMethod.GET)
+	public DoctorTable getIndividualDoctorAppointDetail(@RequestParam("cis_doc_id")String cis_doc_id){
+		DoctorTable doctorTable = (DoctorTable) repositoryDoctorTable.findByCisdocid(cis_doc_id);
+		return doctorTable;
+	}
+	
+	@RequestMapping(value="/detailIndividualHospitalAppoint",method=RequestMethod.GET)
+	public String getIndividualHospitalAppointDetail(@RequestParam("cis_hos_id")String cis_hos_id){
+		HospitalTable hospitalTable = (HospitalTable) repositoryHospitalTable.findByCishosid(cis_hos_id);
+		Gson gson = new Gson();
+		return 	gson.toJson(hospitalTable);
+	}
+	
 }
