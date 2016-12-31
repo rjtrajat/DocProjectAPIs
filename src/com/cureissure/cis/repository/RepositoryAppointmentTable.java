@@ -7,4 +7,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface RepositoryAppointmentTable extends CrudRepository<AppointmentTable, String> {
 AppointmentTable findByUniquekeyappointment(String uniquekeyappointment);
+AppointmentTable findTopByOrderByUniquekeyappointmentDesc();
 }

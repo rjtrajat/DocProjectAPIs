@@ -1,5 +1,8 @@
 package com.cureissure.cis.controller_class;
 
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -182,6 +185,64 @@ public class Controller_one {
 		HospitalTable hospitalTable = (HospitalTable) repositoryHospitalTable.findByCishosid(cis_hos_id);
 		Gson gson = new Gson();
 		return 	gson.toJson(hospitalTable);
+	}
+	
+	@RequestMapping(value="/latestUniquePatientKey",method=RequestMethod.GET)
+	public String getLatestUniquePatientKey(){
+		
+		List<AppointmentTable>  appointmentTableList = (List<AppointmentTable>)repositoryAppointmentTable.findAll();
+		AppointmentTable appointmentTable = new AppointmentTable();
+		String unique;
+		Long tempcount;
+		Long returncount  = 0L;
+		for(AppointmentTable appointment :appointmentTableList){
+			unique= appointment.getUniquekeyappointment();
+			String newunique=unique.replace("PATIENT_KEY_","");
+			tempcount = Long.parseLong(newunique);
+			if(tempcount>returncount){
+				returncount = tempcount;
+				appointmentTable = appointment;
+			}
+		}
+		
+		
+		Gson gson = new Gson();
+		return 	gson.toJson(appointmentTable);
+	}
+	@SuppressWarnings("deprecation")
+	@RequestMapping(value="/patientDetailentry",method=RequestMethod.GET)
+	public String setPatientDetailentry(@RequestParam("uniquekeyappointment") String uniquekeyappointment,@RequestParam("nameofpatient") String nameofpatient,@RequestParam("contactofpatient") String contactofpatient,@RequestParam("mailidofpatient") String mailidofpatient,@RequestParam("longitudeofpatient") Double longitudeofpatient,@RequestParam("latitudeofpatient") Double latitudeofpatient,@RequestParam("problemdescriptionofpatient") String problemdescriptionofpatient,@RequestParam("fulladdressofpatient") String fulladdressofpatient,@RequestParam("statusvalue") String statusvalue,@RequestParam("statusdatetime") String statusdatetime,@RequestParam("dateofappointment")  String dateofappointment,@RequestParam("timeofappointment") String timeofappointment,@RequestParam("paid") Boolean paid,@RequestParam("appointmenttype") String appointmenttype,@RequestParam("appointmenttypekey") String appointmenttypekey)throws Exception{
+		String Statusdatetime = statusdatetime;
+		String Timeanddateofappointment = dateofappointment+" "+timeofappointment;
+		DateFormat parser = new SimpleDateFormat("dd-MM-yyyy"); 
+		Date datestatus ;
+		Date dateappoint ;
+
+		 datestatus = (Date) parser.parse(Statusdatetime);
+		 parser = new SimpleDateFormat("dd-MM-yyyy HH:mm"); 
+		 dateappoint = (Date) parser.parse(Timeanddateofappointment);
+	
+		
+		AppointmentTable appointmentTable = new AppointmentTable();
+		appointmentTable.setUniquekeyappointment(uniquekeyappointment);
+		appointmentTable.setNameofpatient(nameofpatient);
+		appointmentTable.setContactofpatient(contactofpatient);
+		appointmentTable.setMailidofpatient(mailidofpatient);
+		appointmentTable.setLongitudeofpatient(longitudeofpatient);
+		appointmentTable.setLatitudeofpatient(latitudeofpatient);
+		appointmentTable.setProblemdescriptionofpatient(problemdescriptionofpatient);
+		appointmentTable.setFulladdressofpatient(fulladdressofpatient);
+		appointmentTable.setStatusvalue(statusvalue);
+		appointmentTable.setStatusdatetime(datestatus);
+		appointmentTable.setTimeanddateofappointment(dateappoint);
+		appointmentTable.setPaid(paid);
+		appointmentTable.setAppointmenttype(appointmenttype);
+		appointmentTable.setAppointmenttypekey(appointmenttypekey);
+		repositoryAppointmentTable.save(appointmentTable);
+		
+		appointmentTable = (AppointmentTable) repositoryAppointmentTable.findTopByOrderByUniquekeyappointmentDesc();
+		Gson gson = new Gson();
+		return 	gson.toJson(appointmentTable);
 	}
 	
 }
