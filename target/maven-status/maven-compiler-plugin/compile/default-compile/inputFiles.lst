@@ -1,11 +1,12 @@
+E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\controller_class\Controller_one.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\config\configclass.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\repository\RepositoryDoctorTable.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\repository\RepositoryTestCenterTable.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\Runner\ApplicationRunner.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\entity\MedicalShopTable.java
+E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\Mail\MailNotification.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\repository\RepositoryAppointmentTable.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\entity\TestCenterTable.java
-E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\controller\Controller_one.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\entity\DoctorTable.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\Range\CalculateDistance.java
 E:\DocProject\DocProjectAPIs\src\com\cureissure\cis\repository\RepositoryHospitalTable.java

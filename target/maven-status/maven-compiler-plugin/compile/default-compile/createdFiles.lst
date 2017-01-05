@@ -9,7 +9,6 @@ com\cureissure\cis\repository\RepositoryHospitalTable.class
 com\cureissure\cis\config\configclass.class
 com\cureissure\cis\repository\RepositoryDoctorTable.class
 com\cureissure\cis\entity\TestCenterTable.class
-com\cureissure\cis\controller\Controller_one.class
 com\cureissure\cis\entity\HospitalTable.class
 com\cureissure\cis\Range\CalculateDistance.class
 com\cureissure\cis\repository\RepositoryMedicalShopTable.class

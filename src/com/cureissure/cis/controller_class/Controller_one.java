@@ -1,10 +1,19 @@
 package com.cureissure.cis.controller_class;
 
-import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cureissure.cis.Mail.MailNotification;
 import com.cureissure.cis.Range.CalculateDistance;
 import com.cureissure.cis.entity.AppointmentTable;
 import com.cureissure.cis.entity.DoctorTable;
@@ -24,7 +34,6 @@ import com.cureissure.cis.repository.RepositoryHospitalTable;
 import com.cureissure.cis.repository.RepositoryMedicalShopTable;
 import com.cureissure.cis.repository.RepositoryTestCenterTable;
 import com.google.gson.Gson;
-
 
 @RestController
 public class Controller_one {
@@ -245,4 +254,14 @@ public class Controller_one {
 		return 	gson.toJson(appointmentTable);
 	}
 	
+	@RequestMapping(value="/MailDocHosTestMed",method=RequestMethod.GET)
+	public void sendMailDocHosTestMed(@RequestParam("name") String name,@RequestParam("mail") String mail,@RequestParam("contact") String contact,@RequestParam("experience_month") String experience_month,@RequestParam("experience_year") String experience_year)throws Exception{
+		
+		 MailNotification.sendMailDocHosTestMedClass(name, mail, contact, experience_month, experience_year);
+	}
+	
+	@RequestMapping(value="/MailPatient",method=RequestMethod.GET)
+	public void sendMailPatient(@RequestParam("uniquekeyappointmentGlobal") String uniquekeyappointmentGlobal,@RequestParam("nameofpatientGlobal") String nameofpatientGlobal,@RequestParam("contactofpatientGlobal") String contactofpatientGlobal,@RequestParam("mailidofpatientGlobal") String mailidofpatientGlobal,@RequestParam("problemdescriptionofpatientGlobal") String problemdescriptionofpatientGlobal,@RequestParam("fulladdressofpatientGlobal") String fulladdressofpatientGlobal,@RequestParam("statusvalueGlobal") String statusvalueGlobal,@RequestParam("dateofappointmentGlobal") String dateofappointmentGlobal,@RequestParam("timeofappointmentGlobal") String timeofappointmentGlobal,@RequestParam("appointmenttypeGlobal") String appointmenttypeGlobal,@RequestParam("appointmenttypekeyGlobal") String appointmenttypekeyGlobal){
+		 MailNotification.sendMailPatientClass(uniquekeyappointmentGlobal, nameofpatientGlobal, contactofpatientGlobal, mailidofpatientGlobal, problemdescriptionofpatientGlobal, fulladdressofpatientGlobal, statusvalueGlobal, dateofappointmentGlobal, timeofappointmentGlobal, appointmenttypeGlobal, appointmenttypekeyGlobal);	
+	}
 }
