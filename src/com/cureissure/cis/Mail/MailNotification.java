@@ -114,7 +114,7 @@ public class MailNotification {
     
 	}
 	
-	public static void sendMailPatientClass(String uniquekeyappointmentGlobal,String nameofpatientGlobal,String contactofpatientGlobal,String mailidofpatientGlobal,String problemdescriptionofpatientGlobal,String fulladdressofpatientGlobal,String statusvalueGlobal,String dateofappointmentGlobal,String timeofappointmentGlobal,String appointmenttypeGlobal,String appointmenttypekeyGlobal){
+	public static void sendMailPatientClass(String uniquekeyappointmentGlobal,String nameofpatientGlobal,String contactofpatientGlobal,String mailidofpatientGlobal,String problemdescriptionofpatientGlobal,String fulladdressofpatientGlobal,String statusvalueGlobal,String dateofappointmentGlobal,String timeofappointmentGlobal,String appointmenttypeGlobal,String appointmenttypekeyGlobal,String DocHosTestNameGlobal,String DocHosTestAboutGlobal,String DocHosTestAddressGlobal,String DocHosTestExperienceGlobal,String DocHosTestMail_idGlobal,String DocHosTestMobile_NoGlobal,String DocHosTestSpecializationGlobal){
 		String port = "465";;
 	     String sport = "465";
 	
@@ -150,6 +150,14 @@ public class MailNotification {
        message.setSubject("Appointment Confirmation");  
       
        String messageToSend = "";
+       String DoctorHospital="";
+       
+       if(appointmenttypeGlobal.equals("DOCTOR"))
+    	   DoctorHospital = "Doctor";
+       else if(appointmenttypeGlobal.equals("HOSPITAL"))
+    	   DoctorHospital = "Hospital";
+       else
+    	   DoctorHospital = "Test Center";
        
        messageToSend   += "<html>";
        messageToSend   += "<body >";
@@ -231,11 +239,65 @@ public class MailNotification {
 		 messageToSend   += "  </td>";
 		 messageToSend   += "       </tr>";
 		 
+		
+		 
 		 messageToSend   += "     <tr>";
-		 messageToSend   += "     <td><strong>Appointment Type Key : </strong> ";
-		 messageToSend   +=  appointmenttypekeyGlobal;
+		 messageToSend   += "     <td><strong>";
+		 
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" Name : </strong> ";
+		 messageToSend   +=  DocHosTestNameGlobal;
 		 messageToSend   += "  </td>";
 		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>About ";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" : </strong> ";
+		 messageToSend   +=  DocHosTestAboutGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" Address : </strong> ";
+		 messageToSend   +=  DocHosTestAddressGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>About ";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" : </strong> ";
+		 messageToSend   +=  DocHosTestAboutGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" Mail : </strong> ";
+		 messageToSend   +=  DocHosTestMail_idGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" Mobile : </strong> ";
+		 messageToSend   +=  DocHosTestMobile_NoGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>";
+		 messageToSend   +=DoctorHospital;
+		 messageToSend   +=" Specialization : </strong> ";
+		 messageToSend   +=  DocHosTestSpecializationGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
 		 
 		 messageToSend   += "     </table>";
 		 messageToSend   += "  </center>";
