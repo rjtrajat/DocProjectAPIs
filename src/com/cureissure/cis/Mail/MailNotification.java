@@ -50,6 +50,61 @@ public class MailNotification {
         message.setSubject("CureIsSure Registration Confirmation");  
         message.setText("Hi "+name+" your "+mail+" is registered on CureIsSure(CIS) with contact "+contact+". And will contact you Soon");  
           
+        String messageToSend = "";
+        
+        messageToSend   += "<html>";
+        messageToSend   += "<body >";
+        messageToSend   += "<div style=\"height:100%;background-color:#f2f2f2\">";
+        messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
+        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
+        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+        messageToSend   += " </tr>";
+        messageToSend   += " </table>";
+        messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
+        messageToSend   += "  <br>";
+		 messageToSend   += "  <br>";
+		 messageToSend   += " Hi ,<br>";
+		 messageToSend   += " Thanks for Registration on CIS"; 
+		 messageToSend   += " </br>";
+		 messageToSend   += " </div>";
+   		 messageToSend   += " <br>";
+		 messageToSend   += " <center>";
+		 messageToSend   += " <table rules=\"all\" style=\"width:50%; border-style: solid;border-color: #13866f ;border-width: 2px;border-radius: 20px;color:#13866f;background-color:white ;\"; cellpadding=\"10\">";
+		 messageToSend   += " <tr style=\"background-color: #169c81 ; height:50px;color:white\">";
+		 messageToSend   += "     <td><strong>CIS</strong> </td>";
+		 messageToSend   += "   </tr>";
+		 messageToSend   += "   <tr  >";
+		 messageToSend   += "     <td><strong>Name :</strong> ";
+		 messageToSend   += name;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "   <tr>";
+		 messageToSend   += "      <td><strong>Mail :</strong> ";
+		 messageToSend   += mail;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "    </tr>";
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Contact :</strong> ";
+		 messageToSend   += contact;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 messageToSend   += "     </table>";
+		 messageToSend   += "  </center>";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
+		 messageToSend   += "   <br>";
+		 messageToSend   += "   Regards,";
+		 messageToSend   += "   <br>";
+		  
+		 messageToSend   += "         Team CIS </br><br></br>";
+		 messageToSend   += "   </div>";
+		 messageToSend   += "    </div> <br></br><div></div>";
+		 messageToSend   += " </body>";
+		 messageToSend   += " </html>";
+
+        message.setContent(messageToSend,"text/html");
+        
+        
+        
        //send the message  
         Transport.send(message);  
      
@@ -93,8 +148,112 @@ public class MailNotification {
        message.setFrom(new InternetAddress(user));  
        message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
        message.setSubject("Appointment Confirmation");  
-       message.setText("Hi "+nameofpatientGlobal+" your appointment confirmed with detail : "+mailidofpatientGlobal);  
-         
+      
+       String messageToSend = "";
+       
+       messageToSend   += "<html>";
+       messageToSend   += "<body >";
+       messageToSend   += "<div style=\"height:100%;background-color:#f2f2f2\">";
+       messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
+       messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
+       messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+       messageToSend   += " </tr>";
+       messageToSend   += " </table>";
+       messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
+       messageToSend   += "  <br>";
+		 messageToSend   += "  <br>";
+		 messageToSend   += " Hi ,<br>";
+		 messageToSend   += "Your Appointment is confirmed"; 
+		 messageToSend   += " </br>";
+		 messageToSend   += " </div>";
+  		 messageToSend   += " <br>";
+		 messageToSend   += " <center>";
+		 messageToSend   += " <table rules=\"all\" style=\"width:50%; border-style: solid;border-color: #13866f ;border-width: 2px;border-radius: 20px;color:#13866f;background-color:white ;\"; cellpadding=\"10\">";
+		 messageToSend   += " <tr style=\"background-color: #169c81 ; height:50px;color:white\">";
+		 messageToSend   += "     <td><strong>CIS</strong> </td>";
+		 messageToSend   += "   </tr>";
+		 messageToSend   += "   <tr  >";
+		 messageToSend   += "     <td><strong>Name : </strong> ";
+		 messageToSend   += nameofpatientGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "   <tr>";
+		 messageToSend   += "      <td><strong>Mail : </strong> ";
+		 messageToSend   += mailidofpatientGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "    </tr>";
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Contact : </strong> ";
+		 messageToSend   += contactofpatientGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>CISKey : </strong> ";
+		 messageToSend   += uniquekeyappointmentGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Problem Description : </strong> ";
+		 messageToSend   += problemdescriptionofpatientGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Address : </strong> ";
+		 messageToSend   += fulladdressofpatientGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Status : </strong> ";
+		 messageToSend   +=  statusvalueGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Appointment Date : </strong> ";
+		 messageToSend   +=  dateofappointmentGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Appointment Time : </strong> ";
+		 messageToSend   +=  timeofappointmentGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Appointment Type : </strong> ";
+		 messageToSend   +=  appointmenttypeGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     <tr>";
+		 messageToSend   += "     <td><strong>Appointment Type Key : </strong> ";
+		 messageToSend   +=  appointmenttypekeyGlobal;
+		 messageToSend   += "  </td>";
+		 messageToSend   += "       </tr>";
+		 
+		 messageToSend   += "     </table>";
+		 messageToSend   += "  </center>";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
+		 messageToSend   += "   <br>";
+		 messageToSend   += "   Regards,";
+		 messageToSend   += "   <br>";
+		  
+		 messageToSend   += "         Team CIS </br><br></br>";
+		 messageToSend   += "   </div>";
+		 messageToSend   += "    </div> <br></br><div></div>";
+		 messageToSend   += " </body>";
+		 messageToSend   += " </html>";
+
+       message.setContent(messageToSend,"text/html");
+       
+       
       //send the message  
        Transport.send(message);  
     
