@@ -196,6 +196,13 @@ public class Controller_one {
 		return 	gson.toJson(hospitalTable);
 	}
 	
+	@RequestMapping(value="/detailIndividualTestCenterAppoint",method=RequestMethod.GET)
+	public String getIndividualTestCenterAppointDetail(@RequestParam("cis_test_id")String cis_test_id){
+		TestCenterTable testCenterTable = (TestCenterTable) repositoryTestCenterTable.findByCistestid(cis_test_id);
+		Gson gson = new Gson();
+		return 	gson.toJson(testCenterTable);
+	}
+	
 	@RequestMapping(value="/latestUniquePatientKey",method=RequestMethod.GET)
 	public String getLatestUniquePatientKey(){
 		
