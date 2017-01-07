@@ -262,9 +262,9 @@ public class Controller_one {
 	}
 	
 	@RequestMapping(value="/MailDocHosTestMed",method=RequestMethod.GET)
-	public void sendMailDocHosTestMed(@RequestParam("name") String name,@RequestParam("mail") String mail,@RequestParam("contact") String contact,@RequestParam("experience_month") String experience_month,@RequestParam("experience_year") String experience_year)throws Exception{
+	public void sendMailDocHosTestMed(@RequestParam("name") String name,@RequestParam("mail") String mail,@RequestParam("contact") String contact,@RequestParam("experience_month") String experience_month,@RequestParam("experience_year") String experience_year,@RequestParam("typeRegister") String typeRegister)throws Exception{
 		
-		 MailNotification.sendMailDocHosTestMedClass(name, mail, contact, experience_month, experience_year);
+		 MailNotification.sendMailDocHosTestMedClass(name, mail, contact, experience_month, experience_year,typeRegister);
 	}
 	
 	@RequestMapping(value="/MailPatient",method=RequestMethod.GET)
