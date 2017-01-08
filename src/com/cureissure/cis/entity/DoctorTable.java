@@ -48,5 +48,14 @@ public class DoctorTable {
  
  @Column(name="DOCTOR_NAME")
  private String doctorname;
+ 
+ @Column(name="FEES")
+ private String fees; 
+ 
+ @Column(name="DAYS_CLOSED")
+ private String daysclosed; 
+ 
+ @Column(name="OPEN_TIME")
+ private String opentime; 
 
 }

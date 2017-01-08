@@ -46,5 +46,14 @@ public class HospitalTable {
 	 
 	 @Column(name="HOSPITAL_NAME")
 	 private String hospitalname;	
+	 
+	 @Column(name="FEES")
+	 private String fees; 
+	 
+	 @Column(name="DAYS_CLOSED")
+	 private String daysclosed; 
+	 
+	 @Column(name="OPEN_TIME")
+	 private String opentime; 
 	
 }

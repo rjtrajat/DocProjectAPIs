@@ -38,4 +38,6 @@ public class MedicalShopTable {
 	 private String medicalshopname;
 	 
 	
+	 
+	
 }

@@ -46,5 +46,14 @@ public class TestCenterTable {
 	 
 	 @Column(name="TEST_CENTER_NAME")
 	 private String testcentername;	
+	 
+	 @Column(name="FEES")
+	 private String fees; 
+	 
+	 @Column(name="DAYS_CLOSED")
+	 private String daysclosed; 
+	 
+	 @Column(name="OPEN_TIME")
+	 private String opentime; 
 	
 }
