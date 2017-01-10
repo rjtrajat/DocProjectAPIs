@@ -183,6 +183,7 @@ public class Controller_one {
 		return 	gson.toJson(medicalshopcenterTable);
 	}
 	
+	
 	@RequestMapping(value="/detailIndividualDoctorAppoint",method=RequestMethod.GET)
 	public DoctorTable getIndividualDoctorAppointDetail(@RequestParam("cis_doc_id")String cis_doc_id){
 		DoctorTable doctorTable = (DoctorTable) repositoryDoctorTable.findByCisdocid(cis_doc_id);
