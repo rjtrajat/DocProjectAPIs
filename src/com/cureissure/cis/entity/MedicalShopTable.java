@@ -37,6 +37,8 @@ public class MedicalShopTable {
 	 @Column(name="MEDICAL_SHOP_NAME")
 	 private String medicalshopname;
 	 
+	 @Column(name="IMAGE_THUMB")
+	 private String imagethumb;
 	
 	 
 	

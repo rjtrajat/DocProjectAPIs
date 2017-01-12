@@ -55,5 +55,8 @@ public class TestCenterTable {
 	 
 	 @Column(name="OPEN_TIME")
 	 private String opentime; 
+	 
+	 @Column(name="IMAGE_THUMB")
+	 private String imagethumb;
 	
 }
