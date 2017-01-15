@@ -115,12 +115,12 @@ public class MailNotification {
 		 messageToSend   += "   Regards,";
 		 messageToSend   += "   <br>";
 		  
-		 messageToSend   += "         Team CIS </br><br></br>";
+		 messageToSend   += "         Team CIS <br><br></br><br></br>";
 		 messageToSend   += "   </div>";
-		 messageToSend   += "    </div> <br></br><div></div>";
+		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
-	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
-	        messageToSend   += "  <td><strong><b></b></strong> </td>";
+	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
+	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
 		 messageToSend   += " </body>";
@@ -332,11 +332,11 @@ public class MailNotification {
 		 messageToSend   += "   Regards,";
 		 messageToSend   += "   <br>";
 		  
-		 messageToSend   += "         Team CIS </br><br></br>";
+		 messageToSend   += "         Team CIS <br><br></br><br></br>";
 		 messageToSend   += "   </div>";
-		 messageToSend   += "    </div> <br></br><div></div>";
+		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
-	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
+	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
 	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
@@ -447,11 +447,11 @@ public class MailNotification {
 		 messageToSend   += "   Regards,";
 		 messageToSend   += "   <br>";
 		  
-		 messageToSend   += "         Team CIS </br><br></br>";
+		 messageToSend   += "         Team CIS <br><br></br><br></br>";
 		 messageToSend   += "   </div>";
-		 messageToSend   += "    </div> <br></br><div></div>";
+		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
-	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
+	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
 	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
