@@ -37,9 +37,19 @@ public class MedicalShopTable {
 	 @Column(name="MEDICAL_SHOP_NAME")
 	 private String medicalshopname;
 	 
+	 @Column(name="DAYS_CLOSED")
+	 private String daysclosed; 
+	 
+	 @Column(name="OPEN_TIME")
+	 private String opentime; 
+	 
 	 @Column(name="IMAGE_THUMB")
 	 private String imagethumb;
 	
+	 @Column(name="IMAGE_URLS")
+	 private String imageurls;
 	 
+	 @Column(name="RATING")
+	 private double rating;
 	
 }

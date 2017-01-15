@@ -58,5 +58,11 @@ public class HospitalTable {
 	 
 	 @Column(name="IMAGE_THUMB")
 	 private String imagethumb;
+	 
+	 @Column(name="IMAGE_URLS")
+	 private String imageurls;
+	 
+	 @Column(name="RATING")
+	 private double rating;
 	
 }

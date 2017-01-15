@@ -272,4 +272,12 @@ public class Controller_one {
 	public void sendMailPatient(@RequestParam("uniquekeyappointmentGlobal") String uniquekeyappointmentGlobal,@RequestParam("nameofpatientGlobal") String nameofpatientGlobal,@RequestParam("contactofpatientGlobal") String contactofpatientGlobal,@RequestParam("mailidofpatientGlobal") String mailidofpatientGlobal,@RequestParam("problemdescriptionofpatientGlobal") String problemdescriptionofpatientGlobal,@RequestParam("fulladdressofpatientGlobal") String fulladdressofpatientGlobal,@RequestParam("statusvalueGlobal") String statusvalueGlobal,@RequestParam("dateofappointmentGlobal") String dateofappointmentGlobal,@RequestParam("timeofappointmentGlobal") String timeofappointmentGlobal,@RequestParam("appointmenttypeGlobal") String appointmenttypeGlobal,@RequestParam("appointmenttypekeyGlobal") String appointmenttypekeyGlobal,@RequestParam("DocHosTestNameGlobal") String DocHosTestNameGlobal,@RequestParam("DocHosTestAboutGlobal") String DocHosTestAboutGlobal,@RequestParam("DocHosTestAddressGlobal") String DocHosTestAddressGlobal,@RequestParam("DocHosTestExperienceGlobal") String DocHosTestExperienceGlobal,@RequestParam("DocHosTestMail_idGlobal") String DocHosTestMail_idGlobal,@RequestParam("DocHosTestMobile_NoGlobal") String DocHosTestMobile_NoGlobal,@RequestParam("DocHosTestSpecializationGlobal") String DocHosTestSpecializationGlobal){
 		 MailNotification.sendMailPatientClass(uniquekeyappointmentGlobal, nameofpatientGlobal, contactofpatientGlobal, mailidofpatientGlobal, problemdescriptionofpatientGlobal, fulladdressofpatientGlobal, statusvalueGlobal, dateofappointmentGlobal, timeofappointmentGlobal, appointmenttypeGlobal, appointmenttypekeyGlobal, DocHosTestNameGlobal, DocHosTestAboutGlobal, DocHosTestAddressGlobal, DocHosTestExperienceGlobal, DocHosTestMail_idGlobal, DocHosTestMobile_NoGlobal, DocHosTestSpecializationGlobal);	
 	}
+	
+	
+	@RequestMapping(value="/deletePatient",method=RequestMethod.GET)
+	public String deleteAppointment(@RequestParam("appointmentKey") String appointmentKey){
+		repositoryAppointmentTable.delete(appointmentKey);
+	   return "{\"Value\" : \"Deleted\"}";
+	}
+	
 }
