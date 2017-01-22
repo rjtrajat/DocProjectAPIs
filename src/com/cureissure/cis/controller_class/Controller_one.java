@@ -280,4 +280,12 @@ public class Controller_one {
 	   return "{\"Value\" : \"Deleted\"}";
 	}
 	
+	@RequestMapping(value="/sendreq",method=RequestMethod.GET)
+	public String sendRegReq(){
+		
+		MailNotification.sendReq();
+		return "sent mail";
+	}
+	
+	
 }

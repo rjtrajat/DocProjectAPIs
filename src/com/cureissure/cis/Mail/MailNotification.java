@@ -57,7 +57,9 @@ public class MailNotification {
         messageToSend   += "<div style=\"height:100%;background-color:#f2f2f2\">";
         messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
         messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
-        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+        messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+		 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+		 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
         messageToSend   += " </tr>";
         messageToSend   += " </table>";
         messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
@@ -120,7 +122,9 @@ public class MailNotification {
 		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
 	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
-	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+	        messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+			 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+			 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
 		 messageToSend   += " </body>";
@@ -189,7 +193,9 @@ public class MailNotification {
        messageToSend   += "<div style=\"height:100%;background-color:#f2f2f2\">";
        messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
-       messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+       messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+		 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+		 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
        messageToSend   += " </tr>";
        messageToSend   += " </table>";
        messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
@@ -337,7 +343,9 @@ public class MailNotification {
 		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
 	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
-	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+	        messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+			 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+			 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
 		 messageToSend   += " </body>";
@@ -364,7 +372,9 @@ public class MailNotification {
        messageToSend   += "<div style=\"height:100%;background-color:#f2f2f2\">";
        messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:white\">";
-       messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+       messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+		 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+		 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
        messageToSend   += " </tr>";
        messageToSend   += " </table>";
        messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
@@ -452,7 +462,9 @@ public class MailNotification {
 		 messageToSend   += "    </div> ";
 		 messageToSend   += " <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
 	        messageToSend   += " <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
-	        messageToSend   += "  <td><strong><b>CureIsSure</b></strong> </td>";
+	        messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+			 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+			 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
 	        messageToSend   += " </tr>";
 	        messageToSend   += " </table>";
 		 messageToSend   += " </body>";
@@ -472,5 +484,119 @@ public class MailNotification {
        } catch (MessagingException e) {e.printStackTrace();}  
     
 	}
+	
+ static public void sendReq(){
+	 
+	 
+	 String port = "465";;
+     String sport = "465";
+
+ String host="smtp.gmail.com";  
+ final String user="ciscureissure@gmail.com";//change accordingly  
+ final String password="ciscureissurerajat";//change accordingly  
+   
+ String to="rjtrajatsingh2016@gmail.com";//change accordingly  
+ 
+  //Get the session object  
+  Properties props = new Properties();  
+  props.put("mail.smtp.host",host);  
+  props.put("mail.smtp.auth", "true"); 
+  props.put("mail.smtp.port", port);
+   props.put("mail.smtp.socketFactory.port", sport);
+   props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+   props.put("mail.smtp.socketFactory.fallback", "false");
+  
+  
+    
+  Session session = Session.getDefaultInstance(props,  
+   new javax.mail.Authenticator() {  
+     protected PasswordAuthentication getPasswordAuthentication() {  
+   return new PasswordAuthentication(user,password);  
+     }  
+   });  
+ 
+  //Compose the message  
+   try {  
+    MimeMessage message = new MimeMessage(session);  
+    message.setFrom(new InternetAddress(user));  
+    message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
+    message.setSubject("CureIsSure (CIS) : Registration Invitation");  
+      
+    String messageToSend = "";
+    
+   
+		messageToSend   += "<html>";
+		 messageToSend   += "<body >";
+		 messageToSend   += "   <div style=\"height:100%;background-color:#f2f2f2\">";	
+		 messageToSend   += "   <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
+		 messageToSend   += "      <tr style=\"background-color: #13866f ; height:50px;color:white\">";
+		 messageToSend   += "        <td><img src=\"https://cureissure.000webhostapp.com/logotwo.png\" style=\"height:25px;float:left;\">";        
+		 messageToSend   += "     <strong><b><div style=\"float:left\"> <font size=\"4";
+		 messageToSend   += "   \">  &nbsp;CureIsSure</font></div></b></strong> </td>";
+		 messageToSend   += "     </tr>";
+		 messageToSend   += "  </table>";
+		 messageToSend   += "  <div style=\"margin-left:20px;color:#13866f;\">";
+		messageToSend   += "    <br> <b> Hello ,</b>";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "   <div style=\"margin-left:20px;\">";
+		messageToSend   += "      <b>  Sir/Madam </b>";
+		 messageToSend   += "  </div>";
+		 messageToSend   += "  <div>";
+		 messageToSend   += "      <div style=\"margin-left:20px;\">";
+		messageToSend   += "    <br>";
+		 messageToSend   += "     We <b>CureIsSure(CIS)</b> team is working on online medical platform to book  appointment with <b>Doctors , Hospitals and Test Centers</b> .";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "     Anyone needs medical help they can find nearby medical assistance by schedulling their appointments with docotor or in a Hospital .";
+		 messageToSend   += "    <br>";
+		 messageToSend   += "   <br> It is also a best opportunity for Doctors , Hospital and Test Center owners to regitser with CIS using our<b> Android app CureIsSure(CIS)</b>.";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "      Since we are new in this , we promise to improve our service day by day .";
+		 messageToSend   += "       <br>";
+		 messageToSend   += "    <br>";
+		 messageToSend   += "   So , we kindly request you to join us and help us in improving our service .";
+		 messageToSend   += "      <br>";
+		 messageToSend   += "      <br>";
+		 messageToSend   += "      <b>Android App :</b> https://play.google.com/store/apps/details?id=com.cureissure.cis";
+		 messageToSend   += "       <br><br>";
+		 messageToSend   += "       Please , use above android app or using attached apk file <b> (CISApp.apk)</b>  to install and register your hospitals , test centers and as a doctor . ";
+		 messageToSend   += "     <br>";
+		 messageToSend   += "      <br>";
+		 messageToSend   += "      Please , find attached images to know more about CIS and please revert us on  for any query , we will love to answer your questions.";
+		 messageToSend   += " </div>";
+		 messageToSend   += "         <br>";
+		 messageToSend   += "         <br>";
+		 messageToSend   += "         <b>";
+		 messageToSend   += "         Regards,";
+		 messageToSend   += "         <br>";
+		 messageToSend   += "       CIS team";
+		 messageToSend   += "        </b>";
+		 messageToSend   += "    </div>";
+		 messageToSend   += "     </br>";
+		 messageToSend   += "</div>";
+		 messageToSend   += " <br>";
+		 messageToSend   += " <center> </center>";
+		 messageToSend   += "   <br>";
+		 messageToSend   += "   <div style=\"color:#13866f;\">";
+		messageToSend   += "   <table rules=\"all\" style=\"width:100%;border-color: #13866f ;color:#13866f;background-color:#f2f2f2\"; cellpadding=\"10\">";
+		messageToSend   += "      <tr style=\"background-color: #13866f ; height:50px;color:#13866f\">";
+		messageToSend   += "          <td><strong><b>CureIsSure</b></strong> </td>";
+		 messageToSend   += "      </tr>";
+		 messageToSend   += "    </table>";
+		 messageToSend   += " </body>";
+		 messageToSend   += "</html>";
+
+
+    message.setContent(messageToSend,"text/html");
+    
+    
+    
+   //send the message  
+    Transport.send(message);  
+ 
+    System.out.println("message sent successfully...");  
+  
+    } catch (MessagingException e) {e.printStackTrace();} 
+	 
+ }
 	
 }
